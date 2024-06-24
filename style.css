@@ -73,7 +73,7 @@ button {
     width: 500px;
     height: 108px;
     background: var(--containers);
-    padding: 0 0 0 0;
+    padding: 0;
 }
 
 .error {
