@@ -114,7 +114,6 @@ button {
     margin: 0px 0 34px 0;
 }
 
-
 @media (prefers-color-scheme: dark) {
     :root {
         --primary: #6943FF;

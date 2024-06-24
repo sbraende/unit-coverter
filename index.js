@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     })
 
-    // Check for Nan else fill inn conversion values
+    // Check for NaN else fill inn conversion values
     inputForm.addEventListener("submit", function(event) {
         event.preventDefault()
         const inputValue = numberInput.value
@@ -63,5 +63,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
     1 liter = 0.264172052 gallon
     1 kilogram = 2.20462262 pound
     */
-
 })
