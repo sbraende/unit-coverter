@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const inputValue = numberInput.value
         if (isNaN(Number(inputValue))) {
             errorMessage.style.display = "inline"
+        } else if (inputValue === "") {
+            inputValue = 0
+            updateValues(inputValue)
         } else {
             updateValues(inputValue)
         }
