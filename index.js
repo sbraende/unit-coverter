@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (isNaN(Number(inputValue))) {
             errorMessage.style.display = "inline"
         } else if (inputValue === "") {
+            // If inputvalue in empty, set 0 as input value
             inputValue = 0
             updateValues(inputValue)
         } else {
