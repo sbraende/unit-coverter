@@ -61,6 +61,10 @@ button {
     font-size: 16px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .conversion-section {
     margin: 36px 0 0 0;
     display: flex;

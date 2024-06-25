@@ -1,3 +1,4 @@
+// Only load javascript file after the DOM has been loaded
 document.addEventListener("DOMContentLoaded", (event) => {
 
     const inputForm = document.getElementById("input-form")
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const volumeEl = document.getElementById("volume-element")
     const massEl = document.getElementById("mass-element")
 
-    // Checks input while user types
+    // Checks input while user types, invalid characters = error message
     numberInput.addEventListener("input", function() {
         const inputValue = numberInput.value
         if (isNaN(Number(inputValue))) {
@@ -19,12 +20,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Check for NaN else fill inn conversion values
     inputForm.addEventListener("submit", function(event) {
-        event.preventDefault()
+        event.preventDefault() // Stops JS form from resetting values when submitted 
         const inputValue = numberInput.value
         if (isNaN(Number(inputValue))) {
             errorMessage.style.display = "inline"
         } else if (inputValue === "") {
-            // If inputvalue in empty, set 0 as input value
+            // If inputValue in empty, set to 0 
             inputValue = 0
             updateValues(inputValue)
         } else {
@@ -38,6 +39,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         massEl.textContent = `${inputValue} kilos = ${kilosToPounds(inputValue)} pounds | ${inputValue} pounds = ${poundsToKilos(inputValue)} kilos` 
     }
 
+    /*
+    Unit conversion chart
+    1 meter = 3.280839895 feet
+    1 liter = 0.264172052 gallon
+    1 kilogram = 2.20462262 pound
+    */
+    
     function meterToFeet(value) {
         return (value*3.280839895).toFixed(3)
     }
@@ -62,9 +70,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         return (value/2.20462262).toFixed(3)
     }
 
-    /*
-    1 meter = 3.280839895 feet
-    1 liter = 0.264172052 gallon
-    1 kilogram = 2.20462262 pound
-    */
 })
