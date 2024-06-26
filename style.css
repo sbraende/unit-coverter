@@ -24,11 +24,11 @@
     --paragraph: #353535;
     --secondarybg: #F4F4F4;
     --containers: #FFFFFF;
-    --white: #FFFFFF;
+    --light-color: #FFFFFF;
 }
 
 ::placeholder {
-    color: var(--white);
+    color: var(--light-color);
 }
 
 body {
@@ -56,9 +56,9 @@ p {
 }
 
 button {
-    border: 0 solid var(--white);
+    border: 0 solid var(--light-color);
     border-radius: 5px;
-    background: var(--white);
+    background: var(--light-color);
     font-size: 16px;
 }
 
@@ -93,7 +93,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--white);
+    color: var(--light-color);
     background: var(--primary);
 }
 
@@ -103,7 +103,7 @@ button:hover {
     padding: 10px 20px;
     border: 1px solid var(--border);
     border-radius: 5px;
-    color: var(--white);
+    color: var(--light-color);
     background: var(--primary);
     font-size: 58px;
     font-style: bolder;
@@ -127,6 +127,6 @@ button:hover {
         --paragraph: #FFFFFF;
         --secondarybg: #1F2937; 
         --containers: #273549;
-        --white: #FFFFFF
+        --light-color: #FFFFFF
     }
 }
